@@ -1,0 +1,186 @@
+:root {
+    --PrimaryColor: #C2B280;
+    --SecondaryColor: #4B3D2D;
+    --gradientColor: linear-gradient(to right, #4B3D2D, #D8CBAF);
+    --whiteColor: #EAE6D5;
+    --blackColor: #2A2A2A;
+    --textColor: #3B2A20;
+    --whiteColorDeam: #F5F0E1;
+    --greyText: #7B7B7B;
+    --inputColor: #3A2A1C;
+    --bodyColor: #C2B280;
+    --cardBG: #D8CBAF;
+    --lightTextColor: #F2E0D7;
+}
+
+.Home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+
+    video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+
+    .HomeContent {
+        width: 100%;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        color: var(--whiteColor);
+        z-index: 100;
+
+        .textDiv {
+            padding: 2rem 0;
+
+            .smallText {
+                font-size: 13px;
+                text-transform: uppercase;
+                color:var(--greyText)
+            }
+
+            .HomeTitle {
+                position: relative;
+                font-size: 1.8rem;
+            }
+        }
+
+        .cardDiv {
+            position: relative;
+
+            padding: 1rem 1rem;
+            background: var(--whiteColor);
+            border-radius: 10px;
+            grid-template-columns: repeat(3fr);
+            
+            label {
+                display: flex;
+                color: var(--textColor);
+                margin-top: -10px;
+                font-size: 13px;
+                font-weight: 500;
+                gap: 1rem,;
+               
+            }
+
+           
+
+            .input {
+                height: 40px;
+                padding: 0 1rem;
+                background: var(--inputColor);
+                border-radius: 3rem;
+                display: flex;
+                align-items: center;
+
+                input {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: var(--lightTextColor);
+
+                    &::placeholder {
+                        font-size: 13px;
+                        color: var(--lightTextColor);
+                        
+                    }
+
+                    .icon {
+                        font-size: 18px;
+                        color: var(--lightTextColor) !important;
+                        margin-left: 10px;
+                    }
+                }
+
+                
+            }
+        }
+
+        
+    }
+}
+
+/* Mobile-first styles (default for mobile devices) */
+.Home {
+    /* Base styles for the Home container */
+    padding: 1rem;
+}
+
+.HomeContent {
+
+    padding: 1rem;
+}
+
+.cardDiv {
+
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column layout on mobile */
+    gap: 1rem;
+    /* Space between cards */
+}
+
+.input {
+    /* Adjust input for mobile */
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.searchOptions {
+    /* Position searchOptions at the bottom with padding */
+    position: relative;
+    padding: 8px 1rem;
+}
+
+/* Medium screens (>= 660px) */
+@media screen and (min-width: 660px) {
+    .HomeContent {
+        padding: 2rem;
+        /* More padding for better spacing on medium devices */
+    }
+
+    .cardDiv {
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on medium screens */
+    }
+}
+
+/* Large screens (>= 940px) */
+@media screen and (min-width: 940px) {
+    .Home {
+        height: 100vh;
+       
+    }
+
+    .cardDiv {
+        grid-template-columns: repeat(3, 1fr);
+       
+    }
+
+    .input {
+        margin-bottom: 1rem;
+    }
+
+    .searchOptions {
+        bottom: 1rem;
+        padding: 8px 1rem;
+    }
+}
+

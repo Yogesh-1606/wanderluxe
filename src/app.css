@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Colouring and styling website */
+:root {
+    --PrimaryColor: #C2B280;
+    --SecondaryColor: #4B3D2D;
+    --gradientColor: linear-gradient(to right, #4B3D2D, #D8CBAF);
+    --whiteColor: #EAE6D5;
+    --blackColor: #2A2A2A;
+    --textColor: #3B2A20;
+    --whiteColorDim: #F5F0E1;
+    --greyText: #7B7B7B;
+    --inputColor: #3A2A1C;
+    --bodyColor: #C2B280;
+    --cardBG: #D8CBAF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bodyColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    background: var(--gradientColor);
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn a {
+    color: var(--blackColor);
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: var(--SecondaryColor);
+}
+
+img,
+video {
+    width: 100%;
+    height: auto;
+}
+
+input {
+    font-size: 100%;
+}
+
+/* Home Section */
+.Home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.Home .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(214, 191, 173), rgb(59, 71, 59), rgb(59, 27, 5));
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.Home .HomeContent {
+    width: 100%;
+    height: max-content;
+    padding: 8rem 1.5rem 3rem;
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--whiteColor);
+    z-index: 100;
+}
+
+.Home .textDiv {
+    padding: 2rem 0;
+}
+
+.Home .textDiv .smallText {
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1240px) {
+    .container {
+        width: 80% !important;
+        margin: auto !important;
+    }
+
+    .section {
+        padding: 6rem 0 4rem;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body {
+        zoom: 1.7;
+    }
+}
